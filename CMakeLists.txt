@@ -20,7 +20,7 @@ configure_file(translations.qrc ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
 
 qt5_create_translation(QM_FILES ${CMAKE_CURRENT_SOURCE_DIR} ${TS_FILES})
 
-add_executable(${PROJECT_NAME} main.cpp ${TS_FILES} ${CMAKE_CURRENT_BINARY_DIR}/translations.qrc)
+add_executable(${PROJECT_NAME} main.cpp ${TS_FILES} ${QM_FILES} ${CMAKE_CURRENT_BINARY_DIR}/translations.qrc)
 
 message(${QM_FILES})
 
